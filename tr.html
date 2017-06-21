@@ -1,0 +1,72 @@
+<!DOCUMENT>
+<html lang="en">
+ <head>
+ 
+  <title>Auto Load and Refresh Div Every 10 seconds</title>
+ <link rel="stylesheet" href="css/gstyle.css"/>
+
+<style>
+    #auto_load_div div{width:100%;max-width:500px;height:500px;background-color: #000002}
+	
+  </style>
+ 
+ </head>
+ <body bgcolor="#ff6666">
+ <div style="float:left; width:25%;">
+ <div align="left" style ="position:relative;" id="clockdiv">
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+</div>
+
+ <div style="float:left; width:50%;padding-top:30px">
+<div id="auto_load_div" class="wrapper"></div></div>
+
+<script type="text/javascript" src="jscript/mytimer.js"></script>
+ <script>var res = initializeClock('clockdiv', deadline);
+ </script>
+ 
+  <div style="float:right; width:25%;">
+ <div id="clockdiv1">
+  <div>
+    <span class="seconds1"></span>
+    <div class="smalltext1">Score</div>
+  </div>
+</div>
+</div>
+
+ 
+ 
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <script>
+   k=-1;
+      function auto_load(){
+		  k=k+1;
+  var clk = document.getElementById('clockdiv1');
+  var Sp = clk.querySelector('.seconds1');
+  Sp.innerHTML = ('0' + k).slice(-2);
+		  if(k>43)
+		  clearInterval(myVar);
+		  else
+		  {
+        	$.ajax({
+			  type: 'POST',
+		      url: "data.php",
+			  data: {text1:k},
+    	  	  cache: false,
+     	      success: function(data){
+				//  console.log(data);
+             $("#auto_load_div").html(data);} 
+		          });
+		  
+		  }
+      }
+     $(document).ready(function(){
+		auto_load(); //Call auto_load() function when DOM is Ready
+	  });
+   </script>
+  
+ </body>
+</html>
