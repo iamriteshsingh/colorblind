@@ -1,0 +1,97 @@
+	body {
+	  margin: 40px;
+	}
+	
+	.wrapper {
+	padding:1px;
+	border-radius: 10px;
+	height:500px;
+	width:500px;
+		background-color: white;
+		color: #f0f;
+	}
+	.wrapper1 {
+	padding:1px;
+	border-radius: 10px;
+	height:700px;
+	width:700px;
+		background-color: white;
+		color: #f0f;
+	}
+
+#box span{
+ 		margin:3px;
+		color: #f0f;
+		padding: 1px;
+		    float: left;
+			position:relative;
+			right:0;
+			bottom:0;
+			
+    border-radius: 10px;
+    cursor: pointer;
+    width:48%;
+    height:48%;
+
+	}
+
+#status{
+	background-color: white;
+	color: white;
+	height: 10px;
+	width: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #00BF96;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-block;
+}
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+#clockdiv1{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+#clockdiv1 > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #00BF96;
+	display: inline-block;
+}
+
+#clockdiv1 div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-block;
+}
+.smalltext1{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
